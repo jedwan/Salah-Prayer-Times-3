@@ -113,6 +113,10 @@ class Prayer_Times extends Settings_Constants
      */
     public function __construct(Settings $settings)
     {
+        $settings->fajir_rule   = Settings_Constants::$methods[$settings->method]['fajir_rule'];
+        $settings->maghrib_rule = Settings_Constants::$methods[$settings->method]['maghrib_rule'];
+        $settings->isha_rule    = Settings_Constants::$methods[$settings->method]['isha_rule'];
+
         $this->settings = $settings;
         $this->calcMethod = $this->settings->method;
 
